@@ -1,0 +1,54 @@
+.modal {
+    margin: auto;
+    width: 40%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+.bg {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: #000000e1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9;
+}
+
+
+/* From Uiverse.io by cssbuttons-io */ 
+.modal-close-button {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .modal-close-button:hover {
+    background-color: #000000;
+    box-shadow: 0px 15px 20px rgba(82, 82, 82, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  
+  .modal-close-button:active {
+    transform: translateY(-1px);
+  }

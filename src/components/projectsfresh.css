@@ -1,0 +1,299 @@
+
+
+.cardcontainer {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: sticky;
+    top: 0px;
+
+    .card{
+        position: relative;
+        top: 40px;
+        width: 1200px;
+        height: 500px;
+        border-radius: 20px;
+    }
+    .card-1 {
+        transition: filter 300ms;
+    }
+    .card-1:hover {
+        filter: drop-shadow(10px 10px 10px #1e1e1e);
+    }
+    .card-2 {
+        position: relative;
+        top: 125px;
+        background-color: #000000;
+    }
+    .card-3 {
+        position: relative;
+        top: 175px
+    }
+}
+
+.automate {
+    width: 55%;
+    height: 30%;
+    position: absolute;
+    background: rgba(78, 78, 78, 0.10);
+    top: 10%;
+    left: 40%;
+    backdrop-filter: blur(50px);
+}
+
+.automatet {
+    padding: 20px 20px 20px 30px;
+    width: 40%;
+    height: 29%;
+    position: absolute;
+    background-image:
+radial-gradient(at 10% 100%, hsla(206,45%,49%,0.10) 0px, transparent 50%),
+radial-gradient(at 100% 0%, hsla(48,100%,67%,0.08) 0px, transparent 50%);
+     top: 50%;
+    left: 5%;
+    backdrop-filter: blur(50px);
+}
+
+.code-container {
+    background-color:rgb(0, 0, 0);
+background-image:
+radial-gradient(at 100% 0%, hsla(206,45%,49%,0.10) 0px, transparent 50%),
+radial-gradient(at 10% 100%, hsla(48,100%,67%,0.08) 0px, transparent 50%);
+    border-radius: 8px;
+    color: #f8f8f2;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.linet {
+    margin: 5px 0;
+    color: #61dafb;
+}
+.keyword {
+    color: #c678dd;
+}
+.string {
+    color: #98c379;
+}
+.comment {
+    color: #5c6370;
+    font-style: italic;
+}
+.function {
+    color: #56b6c2;
+}
+.easyremovebg {
+    top: 12%;
+    left: 5%;
+}
+
+.easyremovebgdesc {
+    color: #d6d6d6;
+    top: 27%;
+    left: 7%;
+    width: 30%;
+}
+
+
+/* From Uiverse.io by 0xnihilism */ 
+.button-container {
+    display: flex;
+}
+  
+  /* Common styles for both buttons */
+  .brutalist-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    color: #e5dede;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+
+  .brutalist-button:hover {
+    width: 142px;
+    height: 142px;
+}
+  
+  /* Styles for the first button */
+  .button-1 {
+    border: 2px solid #ffffff;
+    border-radius: 12px;
+    box-shadow: 4px 4px 1px #000000;
+  }
+  .button-2 {
+    border: 2px solid #ffffff;
+    border-radius: 12px;
+    box-shadow: 4px 4px 1px #000000;
+    backdrop-filter: blur(5px);
+  }
+  
+  .button-1:hover {
+    background-color: #ffffff;
+    border-color: #030504;
+    transform: translate(-30px, -40px);
+    box-shadow: 10px 10px 0 #000000, 15px 15px 20px rgba(64, 164, 122, 0.2);
+  }
+  
+  .button-1::before,
+  .button-1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent
+    );
+    transition: 0.6s;
+  }
+  
+  .button-1::before {
+    left: -100%;
+  }
+  .button-1::after {
+    left: 100%;
+  }
+  
+  .button-1:hover::before {
+    animation: swipeRight 1.5s infinite;
+  }
+  .button-1:hover::after {
+    animation: swipeLeft 1.5s infinite;
+  }
+  
+  @keyframes swipeRight {
+    100% {
+      transform: translateX(200%) ;
+    }
+  }
+  
+  @keyframes swipeLeft {
+    100% {
+      transform: translateX(-200%) ;
+    }
+  }
+  
+  /* Hover effects */
+  .brutalist-button:hover .openai-logo {
+    transform: translateY(-10px);
+  }
+  
+  .brutalist-button:hover .openai-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .bruta.brutalist-button:hover .openai-text {
+    opacity: 1;
+    max-height: 60px;
+    margin-top: 8px;
+  }
+  
+  /* Styles for the OpenAI logo and text */
+  .openai-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 3;
+  }
+  
+  .openai-icon {
+    width: 64px;
+    height: 64px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+  
+  .openai-text {
+    font-size: 24px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+  }
+  
+  .button-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.2;
+    text-align: center;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 3;
+  }
+  
+  .button-text span:first-child {
+    font-size: 12px;
+    font-weight: normal;
+  }
+  
+  .button-text span:last-child {
+    font-size: 16px;
+  }
+  
+  /* Hover effects */
+  .brutalist-button:hover .openai-logo {
+    transform: translateY(-5px);
+  }
+  
+  .brutalist-button:hover .openai-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .brutalist-button:hover .button-text,
+  .brutalist-button:hover .openai-text {
+    opacity: 1;
+    max-height: 60px;
+    margin-top: 8px;
+  }
+  
+  /* Animation for the OpenAI logo */
+  @keyframes spin-and-zoom {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+    50% {
+      transform: rotate(180deg) scale(1.1);
+    }
+    100% {
+      transform: rotate(360deg) scale(1);
+    }
+  }
+  
+  .brutalist-button:hover .openai-icon {
+    animation: spin-and-zoom 4s cubic-bezier(0.25, 0.8, 0.25, 1) infinite;
+  }
+  
+  .brutalist-button:hover .openai-text {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .brutalist-button:active .openai-icon,
+  .brutalist-button:active .openai-text,
+  .brutalist-button:active .button-text {
+    transform: scale(0.95);
+  }
+  
+.techbutton {
+    top: 70%;
+    left: 87%;
+}

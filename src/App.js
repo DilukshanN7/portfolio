@@ -1,24 +1,50 @@
-import logo from './logo.svg';
 import './App.css';
+import About from './components/about';
+import Backdrop from './components/backdrop';
+import Contact from './components/contact';
+import Features from './components/features';
+import Header from './components/header';
+import Hero from './components/hero';
+import Modal from './components/modal';
+import Mouse from './components/mouse';
+import ProjectFresh from './components/projectsfresh';
+import Talent from './components/talent';
+import { ReactLenis, useLenis } from 'lenis/react'
+import { useRef } from 'react';
 
 function App() {
+  const lenis = useLenis(({ scroll }) => {
+    // called every scroll
+  })
+  
+  const homeRef = useRef(null);
+  const talentRef = useRef(null);
+  const projectRef = useRef(null);
+  const contactRef = useRef(null);
+
+  const scrollToHome = () => homeRef.current.scrollIntoView({ behavior: 'smooth' });
+  const scrollToTalents = () => talentRef.current.scrollIntoView({ behavior: 'smooth' });
+  const scrollToContact = () => contactRef.current.scrollIntoView({ behavior: 'smooth' });
+  const scrollToSpotlight = () => projectRef.current.scrollIntoView({ behavior: 'smooth' });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ReactLenis root>
+      <div className="App">
+        <Header 
+          scrollToHome={scrollToHome}
+          scrollToContact={scrollToContact}
+          scrollToSpotlight={scrollToSpotlight}
+          scrollToTalents={scrollToTalents}
+          />
+          <Mouse />
+        <Hero ref={homeRef} />
+        <Talent  />
+        <About />
+        <Features ref={talentRef} />
+        <ProjectFresh ref={projectRef} />
+        <Contact ref={contactRef} />
+      </div>
+    </ReactLenis>
   );
 }
 

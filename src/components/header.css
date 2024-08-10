@@ -1,0 +1,28 @@
+.headerwrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.mainst {
+    box-sizing: border-box;
+    display: grid;
+    width: 90%;
+    border-radius: 200px;
+    top: 5%;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 70px ;
+    z-index: 99;
+    backdrop-filter: blur(10px);
+    position: fixed;
+}
+
+.headerlink {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.logos {
+    margin-left: 10px;
+    margin-right: 10px;
+}
